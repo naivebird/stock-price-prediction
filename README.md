@@ -1,11 +1,17 @@
+## Overview
+The repository consists of a `main.py` file and 4 sub-directories, `part1`, `part2`, `part3` which contain code for those parts in the assignment and a `data` direcotry where input and output files are stored. You only need to run the `main.py` file for part 1 and part 2 of the assignment and 3 commands at the bottom of this readme file for part 3. Because running full part 1 is time-consuming and resource-intensive, you can test for 1x and 10x scaling factors and comment out the line that runs with 100x scaling factor in the `main.py` file as the result was already stored when I ran it.
 
 ## Part 1
+
+### CSV vs Parquet benchmark
+
 Run the function `part1` in `main.py` file under the project directory to benchmark CSV and parquet file types with 
 scaling factors of 1, 10, and 100.
 ```python
 part1(csv_file_path)
 ```
-Benchmark data will be written to `stock-price-prediction/data/benchmark/benchmark_results.json`\
+Benchmark data will be written to `stock-price-prediction/data/benchmark/benchmark_results.json` for later visualization.
+
 Here is the result:
 ```json
 {
@@ -105,15 +111,18 @@ Here is the result:
 ### Conclusion:
 For small datasets, CSV is a good choice because it is human-readable and easy to work with.
 For large datasets, Parquet is a better choice because it is more efficient in terms of storage and read/write
-performance especially when using compression. Out of the Parquet's compression types tested, zstd and gzip are good choices
+performance especially when using compression. Out of Parquet's compression types tested, zstd and gzip are good choices
 for a balance between compression size and read/write performance.
 
 ## Part 2
+
+### Pandas vs Polars benchmark
+
 Run the function `part2` in the `main.py` file to benchmark the performance of Pandas vs Polars and train stock price prediction models
 ```python
 part2(csv_file_path)
 ```
-Benchmark result:
+Benchmark results:
 ```
 Pandas processing time: 1.51s
 Polars processing time: 0.39s
@@ -123,7 +132,9 @@ Polars performs significantly better in terms of running time compared to Pandas
 familiar with Pandas, it's better to stick with it unless your data is large and an improvement in running time
 is critical for your application because it takes time to adapt to Polars' new syntax.
 
-Model training result:
+### Train and select stock price models
+
+Model training results:
 ```
 Linear Regression - MAE: 0.9810, RMSE: 2.3458, R2: 0.9997, MAPE: 0.0103
 Gradient Boosting (XGBoost) - MAE: 3.8447, RMSE: 36.8855, R2: 0.9165, MAPE: 0.0142
@@ -131,8 +142,7 @@ Gradient Boosting (XGBoost) - MAE: 3.8447, RMSE: 36.8855, R2: 0.9165, MAPE: 0.01
 ### Conclusion
 Linear Regression has better metrics with a higher R squared, a lower root mean squared error (RMSE), a lower mean 
 absolute error (MAE), and a lower mean absolute percentage error (MAPE). Therefore, Linear Regression is chosen. The
-prediction data used for the visualization dashboard is stored in `data/prediction` folder under the name 
-`predicitons.csv`. This file will later be used by Streamlit to load the data for the price prediction dashboard. 
+prediction data used for the visualization dashboard is stored in `data/prediction/predicitons.csv`. This file will later be used by Streamlit to load the data for the price prediction dashboard. 
 
 ## Part 3
 ### Comparing Streamlit and Dash:
@@ -154,6 +164,8 @@ other hand, requires more setup. You need to define layouts using HTML component
 more complex than Streamlit. However, Dash runs faster on large scales and gives you more control/customization
 over your Dashboard. Therefore, it depends on particular use cases to choose right frameworks, for this
 assignment, Streamlit wins because of its simplicity and fast setup.
+
+### Run stock price prediction dashboard
 
 To run the price prediction dashboard, stay in the same directory (the project directory) and run the following
 command:
