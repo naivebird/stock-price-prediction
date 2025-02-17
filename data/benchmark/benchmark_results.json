@@ -1,0 +1,92 @@
+{
+    "Scaling 1x": {
+        "CSV": {
+            "read_time": 0.36,
+            "file_size": 28.21
+        },
+        "Parquet (snappy)": {
+            "read_time": 0.04,
+            "file_size": 10.15
+        },
+        "Parquet (gzip)": {
+            "read_time": 0.03,
+            "file_size": 8.06
+        },
+        "Parquet (brotli)": {
+            "read_time": 0.03,
+            "file_size": 7.76
+        },
+        "Parquet (zstd)": {
+            "read_time": 0.03,
+            "file_size": 8.09
+        },
+        "Parquet (lz4)": {
+            "read_time": 0.02,
+            "file_size": 9.45
+        },
+        "Parquet (none)": {
+            "read_time": 0.02,
+            "file_size": 12.73
+        }
+    },
+    "Scaling 10x": {
+        "CSV": {
+            "read_time": 3.53,
+            "file_size": 282.1
+        },
+        "Parquet (snappy)": {
+            "read_time": 0.22,
+            "file_size": 95.32
+        },
+        "Parquet (gzip)": {
+            "read_time": 0.23,
+            "file_size": 75.97
+        },
+        "Parquet (brotli)": {
+            "read_time": 0.26,
+            "file_size": 73.18
+        },
+        "Parquet (zstd)": {
+            "read_time": 0.17,
+            "file_size": 75.42
+        },
+        "Parquet (lz4)": {
+            "read_time": 0.17,
+            "file_size": 88.37
+        },
+        "Parquet (none)": {
+            "read_time": 0.15,
+            "file_size": 118.02
+        }
+    },
+    "Scaling 100x": {
+        "CSV": {
+            "read_time": 84.74,
+            "file_size": 2821.02
+        },
+        "Parquet (snappy)": {
+            "read_time": 7.12,
+            "file_size": 951.92
+        },
+        "Parquet (gzip)": {
+            "read_time": 10.52,
+            "file_size": 758.13
+        },
+        "Parquet (brotli)": {
+            "read_time": 12.35,
+            "file_size": 730.49
+        },
+        "Parquet (zstd)": {
+            "read_time": 6.55,
+            "file_size": 751.62
+        },
+        "Parquet (lz4)": {
+            "read_time": 6.86,
+            "file_size": 882.42
+        },
+        "Parquet (none)": {
+            "read_time": 5.46,
+            "file_size": 1178.44
+        }
+    }
+}
