@@ -157,9 +157,13 @@ For Streamlit:
 ```
 streamlit run part3/streamlit_benchmark_dashboard.py
 ```
+If the above command doesn't work, use this command:
+```
+python -m streamlit run part3\streamlit_benchmark_dashboard.py
+```
 For Dash:
 ```
-python3 part3/dash_benchmark_dashboard.py
+python part3/dash_benchmark_dashboard.py
 ```
 
 ### Conclusion:
@@ -176,4 +180,8 @@ To run the price prediction dashboard, stay in the same directory (the project d
 command:
 ```
 streamlit run part3/streamlit_price_prediction_dashboard.py
+```
+If the above command doesn't work, use this command:
+```
+python -m streamlit run part3/streamlit_price_prediction_dashboard.py
 ```
