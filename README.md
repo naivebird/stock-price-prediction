@@ -159,7 +159,7 @@ streamlit run part3/streamlit_benchmark_dashboard.py
 ```
 If the above command doesn't work, use this command:
 ```
-python -m streamlit run part3\streamlit_benchmark_dashboard.py
+python -m streamlit run part3/streamlit_benchmark_dashboard.py
 ```
 For Dash:
 ```
