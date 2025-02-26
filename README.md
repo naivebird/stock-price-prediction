@@ -6,7 +6,8 @@ The repository consists of a `main.py` file and 4 sub-directories, `part1`, `par
 ### CSV vs Parquet benchmark
 
 Run the function `part1` in `main.py` file under the project directory to benchmark CSV and parquet file types with 
-scaling factors of 1, 10, and 100.
+scaling factors of 1, 10, and 100. You might have to use the Terminal to run the `main.py` file if running within an IDE
+gives you importing errors.
 ```python
 part1(csv_file_path)
 ```
@@ -133,11 +134,13 @@ familiar with Pandas, it's better to stick with it unless your data is large and
 is critical for your application because it takes time to adapt to Polars' new syntax.
 
 ### Train and select stock price models
+The 2 models used to benchmark are Lasso Regression (Linear Regression with L1 Regularization to avoid overfitting)
+and Gradient Boosting (XGBoost). 
 
 Model training results:
 ```
-Linear Regression - MAE: 0.9810, RMSE: 2.3458, R2: 0.9997, MAPE: 0.0103
-Gradient Boosting (XGBoost) - MAE: 3.8447, RMSE: 36.8855, R2: 0.9165, MAPE: 0.0142
+Lasso Regression - MAE: 5.0208, RMSE: 11.4282, R2: 0.9851, MAPE: 0.0659
+Gradient Boosting (XGBoost) - MAE: 4.5324, RMSE: 17.4068, R2: 0.9654, MAPE: 0.0517
 ```
 ### Conclusion
 Linear Regression has better metrics with a higher R squared, a lower root mean squared error (RMSE), a lower mean 

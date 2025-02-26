@@ -49,7 +49,7 @@ def part2(file_path):
 if __name__ == '__main__':
     csv_file_path = unzip_data()
 
-    part1(csv_file_path)
+    # part1(csv_file_path)
 
     part2(csv_file_path)
 

@@ -4,13 +4,13 @@ import pandas as pd
 import polars as pl
 
 
-def pandas_calculate_moving_average(df, period=14):
+def pandas_calculate_moving_average(df, period=200):
     df[f"{period}dma"] = df.groupby("name")["close"].transform(lambda x: x.rolling(window=period, min_periods=1).mean())
     df.loc[df.groupby('name').head(period - 1).index, f"{period}dma"] = None
     return df
 
 
-def pandas_calculate_rsi(df, period=14):
+def pandas_calculate_rsi(df, period=200):
     delta = df["close"].diff()
     gain = (delta.where(delta > 0, 0)).rolling(window=period, min_periods=1).mean()
     loss = (-delta.where(delta < 0, 0)).rolling(window=period, min_periods=1).mean()
