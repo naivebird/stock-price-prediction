@@ -18,7 +18,7 @@ part1(csv_file_path)
 ```
 Benchmark data will be written to `stock-price-prediction/data/benchmark/benchmark_results.json` for later visualization.
 
-Here is the result:
+Here is the results with read time in seconds and file size in MB for each file type and scaling factor:
 ```json
 {
     "Scaling 1x": {
