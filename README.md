@@ -1,6 +1,11 @@
 ## Overview
 The repository consists of a `main.py` file and 4 sub-directories, `part1`, `part2`, `part3` which contain code for those parts in the assignment and a `data` direcotry where input and output files are stored. You only need to run the `main.py` file for part 1 and part 2 of the assignment and 3 commands at the bottom of this readme file for part 3. Because running full part 1 is time-consuming and resource-intensive, you can test for 1x and 10x scaling factors and comment out the line that runs with 100x scaling factor in the `main.py` file as the result was already stored when I ran it.
 
+## Install required packages
+```
+pip install -r requirements.txt
+```
+
 ## Part 1
 
 ### CSV vs Parquet benchmark
@@ -155,9 +160,13 @@ For Streamlit:
 ```
 streamlit run part3/streamlit_benchmark_dashboard.py
 ```
+If the above command doesn't work, use this command:
+```
+python -m streamlit run part3/streamlit_benchmark_dashboard.py
+```
 For Dash:
 ```
-python3 part3/dash_benchmark_dashboard.py
+python part3/dash_benchmark_dashboard.py
 ```
 
 ### Conclusion:
@@ -174,4 +183,8 @@ To run the price prediction dashboard, stay in the same directory (the project d
 command:
 ```
 streamlit run part3/streamlit_price_prediction_dashboard.py
+```
+If the above command doesn't work, use this command:
+```
+python -m streamlit run part3/streamlit_price_prediction_dashboard.py
 ```
