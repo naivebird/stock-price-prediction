@@ -173,10 +173,20 @@ If the above command doesn't work, run this command:
 ```
 python -m streamlit run part3/streamlit_benchmark_dashboard.py
 ```
+![image](https://github.com/user-attachments/assets/1c9e14d0-dc31-410f-bc9f-d37cff5f7c95)
+
+![image](https://github.com/user-attachments/assets/d7121f8c-8116-412f-a0a0-264421d7d45a)
+
+
 For Dash:
 ```
 python part3/dash_benchmark_dashboard.py
+
 ```
+![image](https://github.com/user-attachments/assets/1efc192f-0ced-400f-91a6-ab228647a816)
+
+![image](https://github.com/user-attachments/assets/098b5a41-a5dd-4ff0-8fd5-64ec5dd929cd)
+
 
 ### Conclusion:
 Both dashboard frameworks are viable solutions to data visualization and interactive dashboards but Streamlit is
@@ -197,3 +207,4 @@ If the above command doesn't work, run this command:
 ```
 python -m streamlit run part3/streamlit_price_prediction_dashboard.py
 ```
+![image](https://github.com/user-attachments/assets/8a6bb2f9-6363-4e12-98f2-58bd2b8f8df7)
