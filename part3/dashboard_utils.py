@@ -1,6 +1,10 @@
 import json
+import sys
+from os.path import join, dirname
 
 import pandas as pd
+
+sys.path.append(join(dirname(__file__),'../../stock-price-prediction'))
 
 from main import BENCHMARK_FILE_PATH
 

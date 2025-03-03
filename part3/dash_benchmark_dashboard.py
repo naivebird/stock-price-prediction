@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 from dash import dcc, html, Input, Output
 
-from part3.dashboard_utils import load_benchmark_data
+from dashboard_utils import load_benchmark_data
 
 df = load_benchmark_data()
 
