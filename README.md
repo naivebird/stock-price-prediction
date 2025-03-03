@@ -16,6 +16,10 @@ gives you importing errors.
 ```python
 part1(csv_file_path)
 ```
+**or**
+```
+python main.py
+```
 Benchmark data will be written to `stock-price-prediction/data/benchmark/benchmark_results.json` for later visualization.
 
 Here are the results with read time in seconds and file size in MB for each file type and scaling factor:
@@ -128,6 +132,11 @@ Run the function `part2` in the `main.py` file to benchmark the performance of P
 ```python
 part2(csv_file_path)
 ```
+**or**
+```
+python main.py
+```
+
 Benchmark results:
 ```
 Pandas processing time: 1.51s
