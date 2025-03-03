@@ -1,5 +1,5 @@
 ## Overview
-The repository consists of a `main.py` file and 4 sub-directories, `part1`, `part2`, `part3` which contain code for those parts in the assignment and a `data` direcotry where input and output files are stored. You only need to run the `main.py` file for part 1 and part 2 of the assignment and 3 commands at the bottom of this readme file for part 3. Because running full part 1 is time-consuming and resource-intensive, you can test for 1x and 10x scaling factors and comment out the line that runs with 100x scaling factor in the `main.py` file as the result was already stored when I ran it.
+The repository consists of a `main.py` file and 4 sub-directories, `part1`, `part2`, `part3`, which contain code for those parts in the assignment and a `data` directory where input and output files are stored. You only need to run the `main.py` file for part 1 and part 2 of the assignment, and 3 commands at the bottom of this readme file for part 3. Because running full part 1 is time-consuming and resource-intensive, you can test for 1x and 10x scaling factors and comment out the line that runs with 100x scaling factor in the `main.py` file as the result was already stored when I ran it.
 
 ## Install required packages
 ```
@@ -118,7 +118,7 @@ Here are the results with read time in seconds and file size in MB for each file
 For small datasets, CSV is a good choice because it is human-readable and easy to work with.
 For large datasets, Parquet is a better choice because it is more efficient in terms of storage and read/write
 performance especially when using compression. Out of Parquet's compression types tested, zstd and gzip are good choices
-for a balance between compression size and read/write performance.
+for a balance between compression size and read/write performance. For this assignment, CSV is good enough.
 
 ## Part 2
 
@@ -135,7 +135,7 @@ Polars processing time: 0.39s
 ```
 ### Conclusion:
 Polars performs significantly better in terms of running time compared to Pandas. However, if you are already
-familiar with Pandas, it's better to stick with it unless your data is large and an improvement in running time
+familiar with Pandas, it's better to stick with it unless your data is large, and an improvement in running time
 is critical for your application because it takes time to adapt to Polars' new syntax.
 
 ### Train and select stock price models
@@ -160,7 +160,7 @@ For Streamlit:
 ```
 streamlit run part3/streamlit_benchmark_dashboard.py
 ```
-If the above command doesn't work, use this command:
+If the above command doesn't work, run this command:
 ```
 python -m streamlit run part3/streamlit_benchmark_dashboard.py
 ```
@@ -174,7 +174,7 @@ Both dashboard frameworks are viable solutions to data visualization and interac
 easier to learn and use as you only need a few lines of code to get your dashboard up and running. Dash, on the
 other hand, requires more setup. You need to define layouts using HTML components and callbacks, which makes it
 more complex than Streamlit. However, Dash runs faster on large scales and gives you more control/customization
-over your Dashboard. Therefore, it depends on particular use cases to choose right frameworks, for this
+over your Dashboard. Therefore, it depends on particular use cases to choose the right frameworks, for this
 assignment, Streamlit wins because of its simplicity and fast setup.
 
 ### Run stock price prediction dashboard
@@ -184,7 +184,7 @@ command:
 ```
 streamlit run part3/streamlit_price_prediction_dashboard.py
 ```
-If the above command doesn't work, use this command:
+If the above command doesn't work, run this command:
 ```
 python -m streamlit run part3/streamlit_price_prediction_dashboard.py
 ```
