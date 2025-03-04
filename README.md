@@ -127,6 +127,7 @@ for a balance between compression size and read/write performance. For this assi
 ## Part 2
 
 ### Pandas vs Polars benchmark
+In this section, I compared Pandas with Polars by using them to separately calculate the following indicators: 200-day moving average, 200-day RSI, 14-day stochastic oscillator and 14-day ROC.
 
 Run the function `part2` in the `main.py` file to benchmark the performance of Pandas vs Polars and train stock price prediction models
 ```python
